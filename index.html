@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SW Tyre Man | 24/7 Emergency Mobile Tyre Fitting</title>
+  <meta name="description" content="SW Tyre Man | 24/7 mobile tyre fitting & emergency roadside call-out across Bristol, Bath & the South West. Rapid GPS dispatch. Call 0800 123 4567.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+            display: ['Sora', 'sans-serif'],
+          },
+          colors: {
+            signal: '#ef4444',            // Emergency Red
+            'signal-bright': '#f87171',
+            charcoal: '#0b0f17',          // Main Dark
+            'slate-deep': '#06090e',      // Deeper Charcoal
+            card: '#111827',              // Card container
+            bordercol: '#1f2937',         // Border line
+            muted: '#9ca3af',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .text-glow {
+      text-shadow: 0 0 24px rgba(239, 68, 68, 0.75), 0 0 45px rgba(239, 68, 68, 0.4);
+    }
+    .signal-glow {
+      box-shadow: 0 0 28px -2px rgba(239, 68, 68, 0.6);
+    }
+    .hazard-band {
+      background: repeating-linear-gradient(
+        -45deg,
+        #ef4444,
+        #ef4444 10px,
+        #0b0f17 10px,
+        #0b0f17 20px
+      );
+    }
+  </style>
+</head>
+<body class="bg-charcoal text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-signal selection:text-white">
+
+  <!-- Fixed Top Header -->
+  <div class="fixed top-0 inset-x-0 z-50">
+    <!-- Desktop Emergency Strip -->
+    <div class="hidden md:block w-full bg-slate-deep border-b border-signal/20">
+      <div class="mx-auto max-w-7xl px-6 py-2 flex items-center justify-between text-xs sm:text-sm">
+        <div class="flex items-center gap-2 text-signal">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="absolute inline-flex h-full w-full rounded-full bg-signal opacity-75 animate-ping"></span>
+            <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-signal"></span>
+          </span>
+          <span class="font-extrabold tracking-wider">SW TYRE MAN | 24/7 EMERGENCY CALL OUT</span>
+          <span class="text-muted">·</span>
+          <span class="text-muted">Rapid Roadside Dispatch across Bristol, Bath & South West</span>
+        </div>
+        <a href="tel:08001234567" class="flex items-center gap-2 font-bold text-signal hover:text-signal-bright transition-colors">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          0800 123 4567
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="bg-charcoal/95 backdrop-blur-md border-b border-bordercol">
+      <div class="hazard-band h-1 w-full" aria-hidden="true"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-lg bg-signal signal-glow">
+            <i data-lucide="truck" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+          </div>
+          <div class="font-display font-extrabold text-sm sm:text-lg tracking-tight text-white truncate">
+            SW Tyre Man <span class="text-signal text-glow">| 24/7</span>
+          </div>
+        </div>
+        <div>
+          <a href="tel:08001234567" class="inline-flex items-center gap-1.5 sm:gap-2 rounded-lg bg-signal px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold text-white transition-all hover:scale-105 active:scale-95 signal-glow whitespace-nowrap">
+            <i data-lucide="phone-call" class="w-4 h-4 shrink-0"></i>
+            <span class="sm:hidden">Call Now</span>
+            <span class="hidden sm:inline">Call Dispatch</span>
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Main Content Body -->
+  <main class="pt-[57px] md:pt-[93px]">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-charcoal py-16 sm:py-24 lg:py-28 border-b border-bordercol">
+      <img src="hero.jpg" alt="SW Tyre Man response van" class="absolute inset-0 h-full w-full object-cover opacity-70 object-center">
+      <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/20"></div>
+
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 rounded-full border border-signal/50 bg-signal/15 px-3 py-1 text-xs font-semibold text-signal-bright mb-5">
+            <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+            24/7 EMERGENCY MOBILE TYRE FITTING
+          </div>
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white">
+            Flat Tyre in the South West? <span class="text-signal text-glow block sm:inline">SW Tyre Man | 24/7 Comes to You</span>
+          </h1>
+          <p class="mt-4 sm:mt-5 text-sm sm:text-lg text-slate-200 max-w-2xl leading-relaxed">
+            Rapid roadside, home, and workplace mobile tyre replacement across Bristol, Bath, and surrounding South West areas. Average 30–60 minute response time.
+          </p>
+
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 w-full">
+            <a href="tel:08001234567" class="inline-flex items-center justify-center gap-2 rounded-xl bg-signal px-5 py-3.5 text-sm sm:text-base font-extrabold text-white text-center transition-all hover:scale-[1.02] active:scale-95 signal-glow">
+              <i data-lucide="phone" class="w-4 h-4 shrink-0"></i>
+              <span>Call SW Tyre Man: 0800 123 4567</span>
+            </a>
+            <a href="#quote" class="inline-flex items-center justify-center rounded-xl border-2 border-signal-bright bg-signal/15 px-5 py-3.5 text-sm sm:text-base font-bold text-signal-bright text-center hover:bg-signal/25 transition-colors">
+              Request Live Dispatch
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="mt-8 sm:mt-9 flex flex-wrap gap-2.5">
+            <div class="inline-flex items-center gap-2 rounded-full border border-bordercol bg-card/85 px-3.5 py-1.5 text-xs sm:text-sm font-medium text-slate-200">
+              <i data-lucide="clock" class="w-4 h-4 text-signal-bright shrink-0"></i>
+              30–60 Min Response
+            </div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-bordercol bg-card/85 px-3.5 py-1.5 text-xs sm:text-sm font-medium text-slate-200">
+              <i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>
+              Covering All South West Roads (M4, M5)
+            </div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-bordercol bg-card/85 px-3.5 py-1.5 text-xs sm:text-sm font-medium text-slate-200">
+              <i data-lucide="wrench" class="w-4 h-4 text-signal-bright shrink-0"></i>
+              All Tyre Sizes & Brands
+            </div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-bordercol bg-card/85 px-3.5 py-1.5 text-xs sm:text-sm font-medium text-slate-200">
+              <i data-lucide="credit-card" class="w-4 h-4 text-signal-bright shrink-0"></i>
+              Card Payments Roadside
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stat Metrics -->
+    <section class="bg-slate-deep border-b border-bordercol">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="flex items-center gap-4">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-signal/15 text-signal-bright">
+            <i data-lucide="timer" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">47<span class="text-signal-bright text-lg ml-1">min</span></div>
+            <div class="text-xs sm:text-sm text-muted">Average response (last 30 days)</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-signal/15 text-signal-bright">
+            <i data-lucide="clock-4" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">24/7</div>
+            <div class="text-xs sm:text-sm text-muted">Dispatch — every day, all hours</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-signal/15 text-signal-bright">
+            <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+          </div>
+          <div>
+            <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">5★</div>
+            <div class="text-xs sm:text-sm text-muted">Rated by stranded drivers across South West</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="bg-charcoal py-16 sm:py-24 border-b border-bordercol">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="max-w-2xl">
+          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Core Services</div>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Mobile tyre services, wherever you are</h2>
+          <p class="mt-3 text-muted leading-relaxed">From motorway breakdowns to pre-booked workplace fitting — one fully-stocked van, the whole South West covered.</p>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="group relative rounded-2xl border border-bordercol bg-card p-6 transition-all hover:border-signal/50 hover:-translate-y-1 overflow-hidden">
+            <div class="relative flex h-12 w-12 items-center justify-center rounded-xl bg-signal/15 text-signal-bright transition-colors group-hover:bg-signal group-hover:text-white">
+              <i data-lucide="wrench" class="w-6 h-6"></i>
+            </div>
+            <h3 class="mt-4 font-display text-lg font-bold text-white">Emergency Roadside Assistance</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Motorway and A-road rapid call-outs. We get to you fast when you're stranded roadside.</p>
+          </div>
+          <div class="group relative rounded-2xl border border-bordercol bg-card p-6 transition-all hover:border-signal/50 hover:-translate-y-1 overflow-hidden">
+            <div class="relative flex h-12 w-12 items-center justify-center rounded-xl bg-signal/15 text-signal-bright transition-colors group-hover:bg-signal group-hover:text-white">
+              <i data-lucide="home" class="w-6 h-6"></i>
+            </div>
+            <h3 class="mt-4 font-display text-lg font-bold text-white">Home & Workplace Fitting</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Pre-booked or same-day convenience — new tyres fitted on your drive or in the car park.</p>
+          </div>
+          <div class="group relative rounded-2xl border border-bordercol bg-card p-6 transition-all hover:border-signal/50 hover:-translate-y-1 overflow-hidden">
+            <div class="relative flex h-12 w-12 items-center justify-center rounded-xl bg-signal/15 text-signal-bright transition-colors group-hover:bg-signal group-hover:text-white">
+              <i data-lucide="gauge" class="w-6 h-6"></i>
+            </div>
+            <h3 class="mt-4 font-display text-lg font-bold text-white">Puncture Repair & Pressure Checks</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Safe on-site repair where possible, plus full pressure and safety balance checks.</p>
+          </div>
+          <div class="group relative rounded-2xl border border-bordercol bg-card p-6 transition-all hover:border-signal/50 hover:-translate-y-1 overflow-hidden">
+            <div class="relative flex h-12 w-12 items-center justify-center rounded-xl bg-signal/15 text-signal-bright transition-colors group-hover:bg-signal group-hover:text-white">
+              <i data-lucide="car" class="w-6 h-6"></i>
+            </div>
+            <h3 class="mt-4 font-display text-lg font-bold text-white">Commercial & 4x4 Tyres</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Vans, light commercial, and passenger vehicles — all sizes and brands stocked.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coverage Areas -->
+    <section class="bg-slate-deep py-16 sm:py-24 border-b border-bordercol">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Coverage Areas</div>
+            <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Across the whole South West</h2>
+            <p class="mt-3 text-muted leading-relaxed">Primary service zones spanning major commuter routes and motorways — if you're stranded on the M4, M5 or A38, SW Tyre Man is already on the way.</p>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Bristol</div>
+            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Bath</div>
+            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Weston-super-Mare</div>
+            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Swindon</div>
+            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Gloucester</div>
+            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Taunton</div>
+            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>M4 Corridor</div>
+            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>M5 Corridor</div>
+            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>A38</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 Simple Steps -->
+    <section class="bg-charcoal py-16 sm:py-24 border-b border-bordercol">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="max-w-2xl">
+          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">How It Works</div>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Back on the road in 3 simple steps</h2>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="relative rounded-2xl border border-bordercol bg-card p-7">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-white font-display font-extrabold text-xl signal-glow">1</div>
+            <h3 class="mt-4 font-display text-xl font-bold text-white">Call SW Tyre Man</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Share your typed location and tyre size — coordinates are captured on submit.</p>
+            <i data-lucide="chevron-right" class="hidden md:block absolute -right-3 top-10 w-6 h-6 text-signal/60"></i>
+          </div>
+          <div class="relative rounded-2xl border border-bordercol bg-card p-7">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-white font-display font-extrabold text-xl signal-glow">2</div>
+            <h3 class="mt-4 font-display text-xl font-bold text-white">Van Dispatched</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">A fully-equipped mobile tyre van is dispatched to your roadside location immediately, 24/7.</p>
+            <i data-lucide="chevron-right" class="hidden md:block absolute -right-3 top-10 w-6 h-6 text-signal/60"></i>
+          </div>
+          <div class="relative rounded-2xl border border-bordercol bg-card p-7">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-white font-display font-extrabold text-xl signal-glow">3</div>
+            <h3 class="mt-4 font-display text-xl font-bold text-white">Fitted Roadside</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Fitted roadside — back on the road in minutes. Pay easily by card on the spot.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's On The Van -->
+    <section class="bg-slate-deep py-16 sm:py-24 border-b border-bordercol">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Flush Image Box with Hazard Tape underneath -->
+        <div class="relative order-2 lg:order-1 overflow-hidden rounded-2xl border border-bordercol bg-card">
+          <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?q=80&w=1000&auto=format&fit=crop" alt="Tyre fitting close-up" class="aspect-square w-full object-cover">
+          <div class="hazard-band h-3.5 w-full" aria-hidden="true"></div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">What's On The Van</div>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Stocked for any size, any brand</h2>
+          <p class="mt-3 text-muted leading-relaxed">Every van rolls fully loaded — so the fitter that reaches you has the right tyre, ready to fit on the spot. No second trips, no depot delays.</p>
+          
+          <div class="mt-6 flex flex-wrap gap-2.5">
+            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>Continental</div>
+            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>Michelin</div>
+            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>Pirelli</div>
+            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>Bridgestone</div>
+            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>Goodyear</div>
+            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>All sizes 13" to 22"</div>
+          </div>
+          <div class="mt-6 flex items-center gap-2 text-sm text-muted">
+            <i data-lucide="cog" class="w-4 h-4 text-signal-bright"></i>
+            Wheel balancing, valves & pressure checks carried out on every fit.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Contact Form -->
+    <section id="quote" class="bg-charcoal py-16 sm:py-24">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6">
+        <div class="text-center">
+          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Quick Contact</div>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Request Immediate Dispatch</h2>
+          <p class="mt-3 text-muted">Type where you are and submit your details. For emergency motorway breakdowns, call <a href="tel:08001234567" class="font-bold text-signal-bright underline">0800 123 4567</a>.</p>
+        </div>
+
+        <!-- Form Card -->
+        <form id="tyreContactForm" class="mt-10 rounded-2xl border border-bordercol bg-card p-6 sm:p-8 grid gap-5 text-left">
+          
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block mb-1.5 text-sm font-semibold text-slate-200">Name</label>
+              <input id="userName" class="flex h-10 w-full rounded-md border border-bordercol bg-slate-deep px-3 py-1 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal" required placeholder="Your name">
+            </div>
+            <div>
+              <label class="block mb-1.5 text-sm font-semibold text-slate-200">Phone Number</label>
+              <input id="userPhone" type="tel" class="flex h-10 w-full rounded-md border border-bordercol bg-slate-deep px-3 py-1 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal" required placeholder="07xxx xxxxxx">
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            
+            <!-- Location Field with Help Toggle -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label class="text-sm font-semibold text-slate-200">Location / Postcode / Road</label>
+                <button type="button" onclick="toggleHelpBox('locationHelpBox')" class="cursor-pointer inline-flex items-center gap-1 text-[11px] font-bold text-signal-bright hover:text-white bg-signal/20 hover:bg-signal/30 px-2 py-0.5 rounded-md transition-all">
+                  <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+                  <span>How to find?</span>
+                </button>
+              </div>
+
+              <input id="userLocation" class="flex h-11 w-full rounded-md border border-bordercol bg-slate-deep px-3 py-1 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal" required placeholder="e.g. BS1 5U or M5 J19 Southbound">
+
+              <!-- Expandable Location Guide -->
+              <div id="locationHelpBox" class="hidden mt-2.5 rounded-xl border border-signal/40 bg-slate-deep/95 p-3.5 shadow-lg">
+                <div class="flex items-center justify-between border-b border-bordercol pb-1.5 mb-2 text-xs font-bold text-signal-bright">
+                  <span>📍 Finding Your Location</span>
+                  <span onclick="toggleHelpBox('locationHelpBox')" class="cursor-pointer text-slate-400 hover:text-white">✕</span>
+                </div>
+                <ul class="text-[12px] text-slate-300 space-y-1.5 leading-snug">
+                  <li>• <strong class="text-white">Type Postcode / Road:</strong> Enter whatever reference you have (e.g. <em>BS1 4DJ</em> or <em>M4 Westbound J19</em>).</li>
+                  <li>• <strong class="text-white">GPS Pin:</strong> When you press submit, your browser will request permission to attach your exact map pin.</li>
+                  <li>• <strong class="text-white">Blue Driver Signs:</strong> On motorways, check the small blue marker posts every 500m (e.g. <em>M5 A 124.5</em>).</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Tyre Size Field with Help Toggle -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label class="text-sm font-semibold text-slate-200">Tyre Size</label>
+                <button type="button" onclick="toggleHelpBox('tyreHelpBox')" class="cursor-pointer inline-flex items-center gap-1 text-[11px] font-bold text-signal-bright hover:text-white bg-signal/20 hover:bg-signal/30 px-2 py-0.5 rounded-md transition-all">
+                  <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+                  <span>Where is this?</span>
+                </button>
+              </div>
+              <input id="userTyre" class="flex h-11 w-full rounded-md border border-bordercol bg-slate-deep px-3 py-1 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal" placeholder="e.g., 205/55 R16">
+
+              <!-- Expandable Tyre Size Guide -->
+              <div id="tyreHelpBox" class="hidden mt-2.5 rounded-xl border border-signal/40 bg-slate-deep/95 p-3.5 shadow-lg">
+                <div class="flex items-center justify-between border-b border-bordercol pb-1.5 mb-2 text-xs font-bold text-signal-bright">
+                  <span>🔧 Reading Your Tyre Sidewall</span>
+                  <span onclick="toggleHelpBox('tyreHelpBox')" class="cursor-pointer text-slate-400 hover:text-white">✕</span>
+                </div>
+                <p class="text-[12px] text-slate-300 leading-relaxed">
+                  Look at the raised lettering on the tyre sidewall. It looks like:
+                </p>
+                <div class="my-2 p-1.5 rounded bg-card border border-bordercol text-center font-mono text-xs font-extrabold text-signal-bright">
+                  205 / 55 R16
+                </div>
+                <p class="text-[11px] text-muted">
+                  Can't see it? Leave it blank and write your vehicle registration below.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div>
+            <label class="block mb-1.5 text-sm font-semibold text-slate-200">Brief Note / Vehicle Reg</label>
+            <textarea id="userNote" rows="3" class="flex min-h-[70px] w-full rounded-md border border-bordercol bg-slate-deep px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal resize-none" placeholder="Vehicle reg, stranded on hard shoulder, flat tyre on driveway, etc."></textarea>
+          </div>
+
+          <button id="submitBtn" type="submit" class="inline-flex items-center justify-center gap-2 mt-2 h-14 w-full rounded-xl bg-signal text-base font-extrabold text-white transition-all hover:scale-[1.01] active:scale-95 signal-glow cursor-pointer">
+            <i data-lucide="send" class="w-5 h-5"></i>
+            <span id="submitBtnText">Send Details to SW Tyre Man</span>
+          </button>
+        </form>
+
+        <!-- Confirmation State -->
+        <div id="formSuccessMessage" class="hidden mt-10 rounded-2xl border border-emerald-500/40 bg-emerald-950/40 p-8 text-center">
+          <div class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 mb-4 ring-8 ring-emerald-500/10">
+            <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Details Sent to SW Tyre Man | 24/7!</h3>
+          <p class="mt-2 text-slate-300 text-sm max-w-md mx-auto">
+            Your location and vehicle details have been generated. Our dispatch technician is ready to respond immediately.
+          </p>
+          <div class="mt-6">
+            <a href="tel:08001234567" class="inline-flex items-center gap-2 text-sm font-bold text-signal-bright underline">
+              Need immediate phone dispatch? Call 0800 123 4567
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-deep border-t border-bordercol">
+    <div class="hazard-band h-1.5 w-full" aria-hidden="true"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-signal signal-glow">
+              <i data-lucide="truck" class="w-5 h-5 text-white"></i>
+            </div>
+            <div class="font-display font-extrabold text-white">SW Tyre Man <span class="text-signal-bright">| 24/7</span></div>
+          </div>
+          <p class="mt-3 text-sm text-muted max-w-xs">24/7 emergency mobile tyre fitting and roadside call-out across the South West.</p>
+        </div>
+        <div>
+          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Emergency Dispatch</div>
+          <a href="tel:08001234567" class="mt-3 flex items-center gap-2 font-display text-2xl font-extrabold text-white hover:text-signal-bright transition-colors">
+            <i data-lucide="phone-call" class="w-5 h-5 text-signal-bright"></i>
+            0800 123 4567
+          </a>
+          <p class="mt-2 text-sm text-muted">Available 24 hours, 7 days a week.</p>
+        </div>
+        <div>
+          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Coverage</div>
+          <p class="mt-3 text-sm text-muted leading-relaxed">Bristol, Bath, Weston-super-Mare, Swindon, Gloucester, Taunton and major commuter routes (M4, M5, A38).</p>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-bordercol flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between text-xs text-muted">
+        <p>© 2026 SW Tyre Man. All rights reserved.</p>
+        <p class="flex items-center gap-1.5">
+          <i data-lucide="shield-check" class="w-4 h-4 text-signal-bright"></i>
+          Operating terms apply · South West coverage notice
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Toggle inline help drawers
+    function toggleHelpBox(boxId) {
+      const box = document.getElementById(boxId);
+      if (box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+      } else {
+        box.classList.add('hidden');
+      }
+      lucide.createIcons();
+    }
+
+    // Form Submission: Requests GPS on button click only, then launches WhatsApp
+    document.getElementById('tyreContactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const submitBtnText = document.getElementById('submitBtnText');
+      
+      // Update with your actual dispatch phone number (UK format without '+', e.g. 447123456789)
+      const dispatchNumber = "447123456789"; 
+
+      const name = document.getElementById('userName').value;
+      const phone = document.getElementById('userPhone').value;
+      const location = document.getElementById('userLocation').value;
+      const tyre = document.getElementById('userTyre').value || 'Unknown / Check Reg';
+      const note = document.getElementById('userNote').value || 'None';
+
+      submitBtn.disabled = true;
+      submitBtnText.innerText = "Securing GPS & Dispatching...";
+
+      let gpsLink = "";
+
+      // Prompt browser for location permission on submit
+      if (navigator.geolocation) {
+        try {
+          gpsLink = await new Promise((resolve) => {
+            navigator.geolocation.getCurrentPosition(
+              (pos) => {
+                const lat = pos.coords.latitude.toFixed(5);
+                const lng = pos.coords.longitude.toFixed(5);
+                resolve(`https://maps.google.com/?q=${lat},${lng}`);
+              },
+              (err) => {
+                // If user denies permission or location fails, resolve empty and use typed fallback
+                resolve("");
+              },
+              { enableHighAccuracy: true, timeout: 6000 }
+            );
+          });
+        } catch (err) {
+          gpsLink = "";
+        }
+      }
+
+      let message = `🚨 *EMERGENCY TYRE CALL-OUT (SW TYRE MAN | 24/7)*%0A%0A` +
+                    `👤 *Customer Name:* ${encodeURIComponent(name)}%0A` +
+                    `📞 *Callback Phone:* ${encodeURIComponent(phone)}%0A` +
+                    `📍 *Typed Location:* ${encodeURIComponent(location)}%0A`;
+      
+      if (gpsLink) {
+        message += `🗺️ *Live Satellite Pin:* ${encodeURIComponent(gpsLink)}%0A`;
+      } else {
+        message += `🗺️ *Live Satellite Pin:* Permission not granted (Rely on typed address)%0A`;
+      }
+
+      message += `🔧 *Tyre Size:* ${encodeURIComponent(tyre)}%0A` +
+                 `📝 *Note / Reg:* ${encodeURIComponent(note)}`;
+
+      // Swap to Confirmation UI
+      document.getElementById('tyreContactForm').classList.add('hidden');
+      document.getElementById('formSuccessMessage').classList.remove('hidden');
+      lucide.createIcons();
+
+      // Launch WhatsApp
+      window.open(`https://wa.me/${dispatchNumber}?text=${message}`, '_blank');
+    });
+  </script>
+</body>
+</html>
