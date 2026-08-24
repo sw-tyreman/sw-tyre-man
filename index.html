@@ -265,20 +265,20 @@
         <div class="mt-10 grid gap-6 md:grid-cols-3">
           <div class="relative rounded-2xl border border-bordercol bg-card p-7">
             <div class="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-white font-display font-extrabold text-xl signal-glow">1</div>
-            <h3 class="mt-4 font-display text-xl font-bold text-white">Call SW Tyre Man</h3>
-            <p class="mt-2 text-sm text-muted leading-relaxed">Share your location via WhatsApp, SMS, or direct call — our dispatch tracks the nearest mobile unit.</p>
+            <h3 class="mt-4 font-display text-xl font-bold text-white">Contact Dispatch</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Share your location and requirements via WhatsApp, SMS, or direct call.</p>
             <i data-lucide="chevron-right" class="hidden md:block absolute -right-3 top-10 w-6 h-6 text-signal/60"></i>
           </div>
           <div class="relative rounded-2xl border border-bordercol bg-card p-7">
             <div class="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-white font-display font-extrabold text-xl signal-glow">2</div>
             <h3 class="mt-4 font-display text-xl font-bold text-white">Van Dispatched</h3>
-            <p class="mt-2 text-sm text-muted leading-relaxed">A fully-equipped mobile tyre van is dispatched to your exact location immediately, 24/7.</p>
+            <p class="mt-2 text-sm text-muted leading-relaxed">A fully-equipped mobile tyre van arrives on the scene or at your booked appointment time.</p>
             <i data-lucide="chevron-right" class="hidden md:block absolute -right-3 top-10 w-6 h-6 text-signal/60"></i>
           </div>
           <div class="relative rounded-2xl border border-bordercol bg-card p-7">
             <div class="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-white font-display font-extrabold text-xl signal-glow">3</div>
-            <h3 class="mt-4 font-display text-xl font-bold text-white">Fitted Roadside</h3>
-            <p class="mt-2 text-sm text-muted leading-relaxed">Fitted roadside — back on the road in minutes. Pay easily by card on the spot.</p>
+            <h3 class="mt-4 font-display text-xl font-bold text-white">Fitted On-Site</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Fitted roadside or at your driveway. Pay easily by card or agreed method on the spot.</p>
           </div>
         </div>
       </div>
@@ -314,17 +314,29 @@
       </div>
     </section>
 
-    <!-- Quick Contact Form with Dual-Action Dispatch Buttons -->
+    <!-- Quick Contact Form with Dual Service Mode -->
     <section id="dispatch" class="bg-charcoal py-16 sm:py-24">
       <div class="mx-auto max-w-3xl px-4 sm:px-6">
         <div class="text-center">
-          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Quick Contact</div>
-          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Request Immediate Dispatch</h2>
-          <p class="mt-3 text-muted">Fill in your details below and choose your preferred dispatch method. For immediate emergencies across South West England and South Wales, call <a href="tel:07123456789" class="font-bold text-signal-bright underline">07123 456789</a>.</p>
+          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Fast Booking</div>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Request Mobile Tyre Service</h2>
+          <p class="mt-3 text-muted">Choose emergency roadside dispatch or pre-book a scheduled mobile service at your home or workplace.</p>
+        </div>
+
+        <!-- Mode Selector Switch -->
+        <div class="mt-8 grid grid-cols-2 gap-2 p-1.5 rounded-2xl bg-slate-deep border border-bordercol max-w-md mx-auto">
+          <button type="button" id="tabEmergency" onclick="switchServiceMode('emergency')" class="flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-extrabold transition-all bg-signal text-white signal-glow cursor-pointer">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            <span>Emergency (24/7)</span>
+          </button>
+          <button type="button" id="tabPrebook" onclick="switchServiceMode('prebook')" class="flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all cursor-pointer">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Pre-Book Service</span>
+          </button>
         </div>
 
         <!-- Form Card -->
-        <form id="tyreContactForm" class="mt-10 rounded-2xl border border-bordercol bg-card p-6 sm:p-8 grid gap-5 text-left">
+        <form id="tyreContactForm" class="mt-8 rounded-2xl border border-bordercol bg-card p-6 sm:p-8 grid gap-5 text-left">
           
           <div class="grid sm:grid-cols-2 gap-4">
             <div>
@@ -337,12 +349,36 @@
             </div>
           </div>
 
+          <!-- Non-Emergency Pre-Booking Fields (Hidden on Emergency Mode) -->
+          <div id="prebookFields" class="hidden grid sm:grid-cols-2 gap-4 p-4 rounded-xl border border-signal/30 bg-slate-deep/70">
+            <div>
+              <label class="block mb-1.5 text-sm font-semibold text-signal-bright">Service Required</label>
+              <select id="userPrebookService" class="flex h-10 w-full rounded-md border border-bordercol bg-charcoal px-3 py-1 text-sm text-white focus:outline-none focus:border-signal">
+                <option value="Home/Workplace Tyre Replacement">Home / Workplace Tyre Replacement</option>
+                <option value="Puncture Repair & Inspection">Puncture Repair & Inspection</option>
+                <option value="Seasonal / Fleet Tyre Fitting">Seasonal / Fleet Tyre Fitting</option>
+                <option value="Tyre Safety & Pressure Check">Tyre Safety & Pressure Check</option>
+              </select>
+            </div>
+            <div>
+              <label class="block mb-1.5 text-sm font-semibold text-signal-bright">Preferred Date & Time Slot</label>
+              <div class="grid grid-cols-2 gap-2">
+                <input id="userPrebookDate" type="date" class="flex h-10 w-full rounded-md border border-bordercol bg-charcoal px-2 py-1 text-xs text-white focus:outline-none focus:border-signal">
+                <select id="userPrebookSlot" class="flex h-10 w-full rounded-md border border-bordercol bg-charcoal px-2 py-1 text-xs text-white focus:outline-none focus:border-signal">
+                  <option value="Morning (8am-12pm)">Morning (8-12)</option>
+                  <option value="Afternoon (12pm-5pm)">Afternoon (12-5)</option>
+                  <option value="Evening (5pm-8pm)">Evening (5-8)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
           <div class="grid sm:grid-cols-2 gap-4">
             
             <!-- Location Field with Help Toggle -->
             <div>
               <div class="flex items-center justify-between mb-1.5">
-                <label class="text-sm font-semibold text-slate-200">Location / Postcode / Road</label>
+                <label id="locationLabel" class="text-sm font-semibold text-slate-200">Roadside Location / Postcode</label>
                 <button type="button" onclick="toggleHelpBox('locationHelpBox')" class="cursor-pointer inline-flex items-center gap-1 text-[11px] font-bold text-signal-bright hover:text-white bg-signal/20 hover:bg-signal/30 px-2 py-0.5 rounded-md transition-all">
                   <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
                   <span>How to find?</span>
@@ -354,13 +390,12 @@
               <!-- Expandable Location Guide -->
               <div id="locationHelpBox" class="hidden mt-2.5 rounded-xl border border-signal/40 bg-slate-deep/95 p-3.5 shadow-lg">
                 <div class="flex items-center justify-between border-b border-bordercol pb-1.5 mb-2 text-xs font-bold text-signal-bright">
-                  <span>📍 Finding Your Location</span>
+                  <span>📍 Location Help</span>
                   <span onclick="toggleHelpBox('locationHelpBox')" class="cursor-pointer text-slate-400 hover:text-white">✕</span>
                 </div>
                 <ul class="text-[12px] text-slate-300 space-y-1.5 leading-snug">
-                  <li>• <strong class="text-white">Type Postcode / Road:</strong> Enter whatever reference you have (e.g. <em>Cardiff Bay</em>, <em>Newport J28</em>, or <em>M4 J19</em>).</li>
-                  <li>• <strong class="text-white">GPS Pin:</strong> When you press submit, your browser will request permission to attach your exact map pin.</li>
-                  <li>• <strong class="text-white">Blue Driver Signs:</strong> On motorways, check the small blue marker posts every 500m (e.g. <em>M4 A 124.5</em>).</li>
+                  <li>• <strong class="text-white">Postcode or Address:</strong> Enter your home postcode, driveway, or workplace address.</li>
+                  <li>• <strong class="text-white">Roadside Pin:</strong> For emergencies, we can also attach your exact GPS coordinates when you tap submit.</li>
                 </ul>
               </div>
             </div>
@@ -397,8 +432,8 @@
           </div>
 
           <div>
-            <label class="block mb-1.5 text-sm font-semibold text-slate-200">Brief Note / Vehicle Reg</label>
-            <textarea id="userNote" rows="3" class="flex min-h-[70px] w-full rounded-md border border-bordercol bg-slate-deep px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal resize-none" placeholder="Vehicle reg, stranded on hard shoulder, flat tyre on driveway, etc."></textarea>
+            <label class="block mb-1.5 text-sm font-semibold text-slate-200">Vehicle Reg / Extra Notes</label>
+            <textarea id="userNote" rows="3" class="flex min-h-[70px] w-full rounded-md border border-bordercol bg-slate-deep px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal resize-none" placeholder="Vehicle reg, flat tyre on driveway, locking nut key available, etc."></textarea>
           </div>
 
           <!-- Dual-Action Submit Buttons -->
@@ -406,13 +441,13 @@
             <!-- Option 1: WhatsApp -->
             <button type="button" onclick="handleSubmit('whatsapp')" class="inline-flex items-center justify-center gap-2 h-14 w-full rounded-xl bg-emerald-600 hover:bg-emerald-500 text-sm sm:text-base font-extrabold text-white transition-all hover:scale-[1.01] active:scale-95 shadow-lg shadow-emerald-950/40 cursor-pointer">
               <i data-lucide="message-circle" class="w-5 h-5"></i>
-              <span>Send via WhatsApp</span>
+              <span id="btnTextWhatsapp">Send via WhatsApp</span>
             </button>
 
-            <!-- Option 2: Standard SMS (Works on 100% of devices) -->
+            <!-- Option 2: Standard SMS -->
             <button type="button" onclick="handleSubmit('sms')" class="inline-flex items-center justify-center gap-2 h-14 w-full rounded-xl bg-signal hover:bg-signal-bright text-sm sm:text-base font-extrabold text-white transition-all hover:scale-[1.01] active:scale-95 signal-glow cursor-pointer">
               <i data-lucide="send" class="w-5 h-5"></i>
-              <span>Send via Text (SMS)</span>
+              <span id="btnTextSMS">Send via Text (SMS)</span>
             </button>
           </div>
         </form>
@@ -424,7 +459,7 @@
           </div>
           <h3 class="font-display text-2xl font-bold text-white">Details Dispatched!</h3>
           <p class="mt-2 text-slate-300 text-sm max-w-md mx-auto">
-            Your location and tyre details have been formatted. Our dispatch technician is ready to assist.
+            Your details have been formatted and sent. Our mobile technician team will confirm shortly.
           </p>
           <div class="mt-6">
             <a href="tel:07123456789" class="inline-flex items-center gap-2 text-sm font-bold text-signal-bright underline">
@@ -473,7 +508,34 @@
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Toggle inline help drawers
+    let currentMode = 'emergency';
+
+    function switchServiceMode(mode) {
+      currentMode = mode;
+      const tabEmergency = document.getElementById('tabEmergency');
+      const tabPrebook = document.getElementById('tabPrebook');
+      const prebookFields = document.getElementById('prebookFields');
+      const locationLabel = document.getElementById('locationLabel');
+      const locationInput = document.getElementById('userLocation');
+
+      if (mode === 'prebook') {
+        tabPrebook.className = 'flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-extrabold transition-all bg-signal text-white signal-glow cursor-pointer';
+        tabEmergency.className = 'flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all cursor-pointer';
+        
+        prebookFields.classList.remove('hidden');
+        locationLabel.textContent = 'Fitting Address / Postcode (Home or Work)';
+        locationInput.placeholder = 'e.g. BS1 4DJ or 12 High Street, Newport';
+      } else {
+        tabEmergency.className = 'flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-extrabold transition-all bg-signal text-white signal-glow cursor-pointer';
+        tabPrebook.className = 'flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all cursor-pointer';
+        
+        prebookFields.classList.add('hidden');
+        locationLabel.textContent = 'Roadside Location / Postcode';
+        locationInput.placeholder = 'e.g. CF10 1AA, BS1 5U, or M4 J28';
+      }
+      lucide.createIcons();
+    }
+
     function toggleHelpBox(boxId) {
       const box = document.getElementById(boxId);
       if (box.classList.contains('hidden')) {
@@ -484,11 +546,10 @@
       lucide.createIcons();
     }
 
-    // Unified Submission Handler for WhatsApp and Standard SMS
     function handleSubmit(channel) {
       const form = document.getElementById('tyreContactForm');
       
-      // Validate HTML5 required fields manually before redirecting
+      // Check HTML5 validity
       if (!form.reportValidity()) {
         return;
       }
@@ -502,22 +563,44 @@
       const tyre = document.getElementById('userTyre').value || 'Unknown / Check Reg';
       const note = document.getElementById('userNote').value || 'None';
 
+      // Visual feedback while phone locks GPS
+      const btnWhatsapp = document.getElementById('btnTextWhatsapp');
+      const btnSMS = document.getElementById('btnTextSMS');
+      if (btnWhatsapp) btnWhatsapp.textContent = 'Locating GPS...';
+      if (btnSMS) btnSMS.textContent = 'Locating GPS...';
+
+      let dispatched = false;
+
       function dispatchMessage(gpsLink) {
-        let message = `🚨 EMERGENCY TYRE CALL-OUT (SW TYRE MAN | 24/7)\n\n` +
+        if (dispatched) return;
+        dispatched = true;
+
+        let header = currentMode === 'emergency' 
+          ? `🚨 EMERGENCY TYRE CALL-OUT (SW TYRE MAN | 24/7)\n\n`
+          : `📅 PRE-BOOKED MOBILE SERVICE (SW TYRE MAN)\n\n`;
+
+        let message = header +
                       `👤 Name: ${name}\n` +
-                      `📞 Phone: ${phone}\n` +
-                      `📍 Location: ${location}\n`;
-        
-        if (gpsLink) {
-          message += `🗺️ GPS Pin: ${gpsLink}\n`;
-        } else {
-          message += `🗺️ GPS Pin: Not provided\n`;
+                      `📞 Phone: ${phone}\n`;
+
+        if (currentMode === 'prebook') {
+          const service = document.getElementById('userPrebookService').value;
+          const date = document.getElementById('userPrebookDate').value || 'Earliest available';
+          const slot = document.getElementById('userPrebookSlot').value;
+          message += `🛠️ Service: ${service}\n` +
+                     `📆 Preferred Date: ${date} (${slot})\n`;
         }
 
-        message += `🔧 Tyre: ${tyre}\n` +
+        message += `📍 Location: ${location}\n`;
+        
+        if (gpsLink) {
+          message += `🗺️ Roadside GPS Pin: ${gpsLink}\n`;
+        }
+
+        message += `🔧 Tyre Size: ${tyre}\n` +
                    `📝 Note: ${note}`;
 
-        // Swap to confirmation UI
+        // Confirmation UI swap
         document.getElementById('tyreContactForm').classList.add('hidden');
         document.getElementById('formSuccessMessage').classList.remove('hidden');
         lucide.createIcons();
@@ -525,25 +608,35 @@
         if (channel === 'whatsapp') {
           window.location.href = `https://wa.me/${intlDispatchNumber}?text=${encodeURIComponent(message)}`;
         } else {
-          // Detect iOS vs Android for correct SMS protocol delimiter (?body= vs &body=)
           const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
           const separator = isIOS ? '&' : '?';
           window.location.href = `sms:${dispatchNumber}${separator}body=${encodeURIComponent(message)}`;
         }
       }
 
-      // Quick 2.5-second GPS check
-      if (navigator.geolocation) {
+      // Geolocation Handler
+      if (currentMode === 'emergency' && "geolocation" in navigator) {
+        // Fallback timer: guarantees redirect within 6s even if browser hangs
+        const safetyTimer = setTimeout(() => {
+          dispatchMessage("");
+        }, 6000);
+
         navigator.geolocation.getCurrentPosition(
           (pos) => {
+            clearTimeout(safetyTimer);
             const lat = pos.coords.latitude.toFixed(5);
             const lng = pos.coords.longitude.toFixed(5);
             dispatchMessage(`https://maps.google.com/?q=${lat},${lng}`);
           },
           (err) => {
+            clearTimeout(safetyTimer);
             dispatchMessage("");
           },
-          { enableHighAccuracy: true, timeout: 2500 }
+          { 
+            enableHighAccuracy: true, 
+            timeout: 5500, 
+            maximumAge: 60000 
+          }
         );
       } else {
         dispatchMessage("");
