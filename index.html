@@ -12,7 +12,7 @@
   <!-- High-Priority Preload for Instant LCP -->
   <link rel="preload" as="image" href="hero.webp" type="image/webp" fetchpriority="high">
 
-  <!-- Open Graph / Social Previews -->
+  <!-- Open Graph / WhatsApp / Social Share Previews -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SW Tyre Man">
   <meta property="og:url" content="https://sw-tyreman.com/">
@@ -21,7 +21,18 @@
   <meta property="og:image" content="https://sw-tyreman.com/hero.webp">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Local Business Schema for Google -->
+  <!-- Google Site Name Specification Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SW Tyre Man",
+    "alternateName": ["SW Tyreman", "SW Tyre Man 24/7"],
+    "url": "https://sw-tyreman.com/"
+  }
+  </script>
+
+  <!-- Local Business Schema for Local Pack & SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,7 +42,8 @@
     "url": "https://sw-tyreman.com",
     "telephone": "+447123456789",
     "priceRange": "££",
-    "description": "24/7 emergency mobile tyre fitting, roadside puncture repair, and mobile tyre replacement across South West England and South Wales.",
+    "description": "Emergency mobile tyre fitting Bristol, Bath, Newport & Cardiff. 24/7 roadside puncture repair and emergency callouts.",
+    "keywords": "tyre Bristol, emergency tyre Bristol, mobile tyre fitting Bristol, SW tyre Bristol, 24/7 mobile tyre repair, motorway tyre replacement",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -54,11 +66,11 @@
   }
   </script>
 
-  <!-- Favicon (SVG for desktop browser tabs, PNG for Google Search) -->
+  <!-- Favicon: SVG for Desktop Browser Tabs, PNG for Google Search Snippets -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23ef4444'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-weight='900' font-size='52' fill='white' letter-spacing='-2'>SW</text></svg>">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
   <link rel="apple-touch-icon" href="/favicon.png">
-  
+
   <!-- Optimized Non-Blocking Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -565,9 +577,15 @@
           <p class="mt-3 text-sm text-muted leading-relaxed">Bristol, Bath, Cardiff, Newport, M4, M5, Severn Bridges, and all surrounding areas.</p>
         </div>
       </div>
+      
+      <!-- Sub-Footer with Social Links and Legal -->
       <div class="mt-10 pt-6 border-t border-bordercol flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between text-xs text-muted">
         <p>© 2026 SW Tyre Man. All rights reserved.</p>
-        <div>
+        <div class="flex items-center gap-6">
+          <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 hover:text-white transition-colors">
+            <i data-lucide="instagram" class="w-4 h-4 text-signal-bright"></i>
+            <span>Instagram</span>
+          </a>
           <a href="./policy/" class="hover:text-white transition-colors underline underline-offset-4">Terms & Privacy Policy</a>
         </div>
       </div>
@@ -654,7 +672,7 @@
 
       let dispatched = false;
 
-      function dispatchMessage(gpsLink) {
+      function dispatchMessage(lat, lng) {
         if (dispatched) return;
         dispatched = true;
 
@@ -679,10 +697,18 @@
                      `📆 Preferred Date: ${dateStr} (${slot})\n`;
         }
 
-        message += `📍 Location: ${location}\n`;
-        
-        if (gpsLink) {
-          message += `🗺️ Roadside GPS Pin: ${gpsLink}\n`;
+        message += `📍 Customer Location: ${location}\n\n`;
+
+        // Direct sat-nav routing links for your drivers
+        if (lat && lng) {
+          message += `🗺️ Roadside Sat-Nav Routing:\n` +
+                     `• Waze: https://waze.com/ul?ll=${lat},${lng}&navigate=yes\n` +
+                     `• Google Maps: https://maps.google.com/?q=${lat},${lng}\n\n`;
+        } else {
+          const encodedLoc = encodeURIComponent(location);
+          message += `🗺️ Sat-Nav Routing:\n` +
+                     `• Waze: https://waze.com/ul?q=${encodedLoc}&navigate=yes\n` +
+                     `• Google Maps: https://maps.google.com/?q=${encodedLoc}\n\n`;
         }
 
         message += `🔧 Tyre Size: ${tyre}\n` +
@@ -703,28 +729,28 @@
 
       if (currentMode === 'emergency' && "geolocation" in navigator) {
         const safetyTimer = setTimeout(() => {
-          dispatchMessage("");
-        }, 6000);
+          dispatchMessage(null, null);
+        }, 5500);
 
         navigator.geolocation.getCurrentPosition(
           (pos) => {
             clearTimeout(safetyTimer);
             const lat = pos.coords.latitude.toFixed(5);
             const lng = pos.coords.longitude.toFixed(5);
-            dispatchMessage(`https://maps.google.com/?q=${lat},${lng}`);
+            dispatchMessage(lat, lng);
           },
           (err) => {
             clearTimeout(safetyTimer);
-            dispatchMessage("");
+            dispatchMessage(null, null);
           },
           { 
             enableHighAccuracy: true, 
-            timeout: 5500, 
+            timeout: 5000, 
             maximumAge: 60000 
           }
         );
       } else {
-        dispatchMessage("");
+        dispatchMessage(null, null);
       }
     }
   </script>
