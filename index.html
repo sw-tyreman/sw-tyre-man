@@ -122,9 +122,7 @@
       background: linear-gradient(to top, #0b0f17 0%, rgba(11, 15, 23, 0.85) 45%, rgba(11, 15, 23, 0.55) 100%);
     }
     input[type="date"]::-webkit-calendar-picker-indicator {
-      filter: invert(1);
-      cursor: pointer;
-      opacity: 0.8;
+      display: none;
     }
   </style>
 </head>
@@ -440,9 +438,10 @@
               <label class="block mb-1.5 text-sm font-semibold text-signal-bright">Preferred Date & Time Slot</label>
               <div class="grid grid-cols-2 gap-2">
                 
-                <div class="relative">
-                  <input id="userPrebookDate" type="date" onchange="updateDateDisplay(this)" class="opacity-0 absolute inset-0 w-full h-full z-10 cursor-pointer">
-                  <div id="dateDisplayLabel" class="flex h-11 w-full items-center justify-between rounded-lg border border-bordercol bg-charcoal px-3 py-2 text-xs sm:text-sm text-slate-300 pointer-events-none">
+                <!-- Entire Clickable Box for Native Picker -->
+                <div class="relative cursor-pointer" onclick="openDatePicker()">
+                  <input id="userPrebookDate" type="date" onchange="updateDateDisplay(this)" class="sr-only">
+                  <div id="dateDisplayLabel" class="flex h-11 w-full items-center justify-between rounded-lg border border-bordercol bg-charcoal px-3 py-2 text-xs sm:text-sm text-slate-300 hover:border-signal transition-colors">
                     <span id="dateText" class="truncate font-medium">Select Date</span>
                     <i data-lucide="calendar" class="w-4 h-4 text-signal-bright shrink-0 ml-1"></i>
                   </div>
@@ -578,9 +577,13 @@
         </div>
       </div>
       
-      <!-- Sub-Footer with Social Links and Legal -->
+      <!-- Sub-Footer with Version, Social, and Legal -->
       <div class="mt-10 pt-6 border-t border-bordercol flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between text-xs text-muted">
-        <p>© 2026 SW Tyre Man. All rights reserved.</p>
+        <div class="flex items-center gap-2">
+          <p>© 2026 SW Tyre Man. All rights reserved.</p>
+          <span class="text-bordercol">|</span>
+          <span class="text-[11px] font-mono opacity-60">v1.2.0</span>
+        </div>
         <div class="flex items-center gap-6">
           <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 hover:text-white transition-colors">
             <i data-lucide="instagram" class="w-4 h-4 text-signal-bright"></i>
@@ -621,6 +624,15 @@
         locationInput.placeholder = 'e.g. CF10 1AA, BS1 5U, or M4 J28';
       }
       if (window.lucide) lucide.createIcons();
+    }
+
+    function openDatePicker() {
+      const input = document.getElementById('userPrebookDate');
+      if (input && typeof input.showPicker === 'function') {
+        input.showPicker();
+      } else if (input) {
+        input.focus();
+      }
     }
 
     function updateDateDisplay(input) {
