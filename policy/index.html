@@ -1,97 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth overflow-x-hidden" style="background-color: #0b0f17;">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tyre Nation | 24/7 Mobile Tyres South West England & South Wales</title>
-  <meta name="description" content="Tyre Nation | 24/7 mobile tyre fitting & emergency roadside call-out across South West England & South Wales. Rapid GPS dispatch. Call 07123 456789.">
+  <title>Service Terms & Privacy Policy | Tyre Nation</title>
+  <meta name="robots" content="noindex, follow">
 
-  <!-- Canonical Authority URL -->
-  <link rel="canonical" href="https://tyre-nation.com/">
-
-  <!-- High-Priority Preload for Instant LCP -->
-  <link rel="preload" as="image" href="hero.webp" type="image/webp" fetchpriority="high">
-
-  <!-- Open Graph / WhatsApp / Social Share Previews -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Tyre Nation">
-  <meta property="og:url" content="https://tyre-nation.com/">
-  <meta property="og:title" content="Tyre Nation | 24/7 Mobile Tyres South West England & South Wales">
-  <meta property="og:description" content="Rapid 30-60 min roadside emergency tyre replacement & mobile fitting across Bristol, Bath, Cardiff, Newport, M4 & M5.">
-  <meta property="og:image" content="https://tyre-nation.com/hero.webp">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Google Site Name Specification Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Tyre Nation",
-    "alternateName": ["Tyre Nation 24/7", "TyreNation LTD"],
-    "url": "https://tyre-nation.com/"
-  }
-  </script>
-
-  <!-- Local Business Schema for Local Pack & SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "Tyre Nation",
-    "legalName": "TyreNation LTD",
-    "image": "https://tyre-nation.com/hero.webp",
-    "url": "https://tyre-nation.com/",
-    "telephone": "+447123456789",
-    "priceRange": "££",
-    "description": "Emergency mobile tyre fitting Bristol, Bath, Newport & Cardiff. 24/7 roadside puncture repair and emergency callouts.",
-    "keywords": "tyre Bristol, emergency tyre Bristol, mobile tyre fitting Bristol, Tyre Nation Bristol, 24/7 mobile tyre repair, motorway tyre replacement",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
-    ],
-    "areaServed": [
-      { "@type": "City", "name": "Bristol" },
-      { "@type": "City", "name": "Bath" },
-      { "@type": "City", "name": "Cardiff" },
-      { "@type": "City", "name": "Newport" },
-      { "@type": "City", "name": "Swindon" },
-      { "@type": "City", "name": "Gloucester" },
-      { "@type": "City", "name": "Weston-super-Mare" }
-    ]
-  }
-  </script>
-
-  <!-- Standard Favicons & Web App Manifest Assets -->
+  <!-- Favicon & Web App Manifest Assets -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- Optimized Non-Blocking Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Sora:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Sora:wght@700;800;900&display=swap">
-  </noscript>
-
-  <!-- Tailwind CDN & Config -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Manrope', 'sans-serif'],
-            display: ['Sora', 'sans-serif'],
-          },
           colors: {
             signal: '#ef4444',
             'signal-bright': '#f87171',
@@ -105,673 +32,130 @@
       }
     }
   </script>
-  <style>
-    .text-glow {
-      text-shadow: 0 0 24px rgba(239, 68, 68, 0.75), 0 0 45px rgba(239, 68, 68, 0.4);
-    }
-    .signal-glow {
-      box-shadow: 0 0 28px -2px rgba(239, 68, 68, 0.6);
-    }
-    .hazard-band {
-      background: repeating-linear-gradient(
-        -45deg,
-        #ef4444,
-        #ef4444 10px,
-        #0b0f17 10px,
-        #0b0f17 20px
-      );
-    }
-    .hero-vignette {
-      background: linear-gradient(to top, #0b0f17 0%, rgba(11, 15, 23, 0.85) 45%, rgba(11, 15, 23, 0.55) 100%);
-    }
-    input[type="date"]::-webkit-calendar-picker-indicator {
-      display: none;
-    }
-  </style>
 </head>
-<body class="bg-charcoal text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-signal selection:text-white">
+<body class="bg-charcoal text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-signal selection:text-white">
 
-  <!-- Fixed Top Header -->
-  <div class="fixed top-0 inset-x-0 z-50">
-    <div class="hidden md:block w-full bg-slate-deep border-b border-signal/20">
-      <div class="mx-auto max-w-7xl px-6 py-2 flex items-center justify-between text-xs sm:text-sm">
-        <div class="flex items-center gap-2 text-signal">
-          <span class="relative flex h-2.5 w-2.5">
-            <span class="absolute inline-flex h-full w-full rounded-full bg-signal opacity-75 animate-ping"></span>
-            <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-signal"></span>
-          </span>
-          <span class="font-extrabold tracking-wider">TYRE NATION | 24/7 EMERGENCY CALL OUT</span>
-          <span class="text-muted">·</span>
-          <span class="text-muted">Available across South West England & South Wales</span>
-        </div>
-        <a href="tel:07123456789" class="flex items-center gap-2 font-bold text-signal hover:text-signal-bright transition-colors">
-          <i data-lucide="phone-call" class="w-4 h-4"></i>
-          07123 456789
-        </a>
-      </div>
+  <!-- Header -->
+  <header class="bg-slate-deep border-b border-bordercol py-4 px-6">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <a href="../" class="font-extrabold text-base sm:text-lg tracking-tight text-white flex items-center gap-2 hover:text-signal-bright transition-colors">
+        <span>← Back to</span>
+        <span>Tyre Nation <span class="text-signal">| 24/7</span></span>
+      </a>
+      <a href="tel:07123456789" class="text-xs sm:text-sm font-bold text-signal hover:text-signal-bright flex items-center gap-1.5 transition-colors">
+        <i data-lucide="phone-call" class="w-4 h-4"></i>
+        07123 456789
+      </a>
     </div>
+  </header>
 
-    <!-- Main Navigation Bar -->
-    <header class="bg-charcoal/95 backdrop-blur-md border-b border-bordercol">
-      <div class="hazard-band h-1 w-full" aria-hidden="true"></div>
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
-        <div class="flex items-center min-w-0">
-          <div class="font-display font-extrabold text-base sm:text-xl tracking-tight text-white truncate">
-            Tyre Nation <span class="text-signal text-glow">| 24/7</span>
-          </div>
-        </div>
-        <div>
-          <a href="tel:07123456789" class="inline-flex items-center gap-1.5 sm:gap-2 rounded-lg bg-signal px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold text-white transition-all hover:scale-105 active:scale-95 signal-glow whitespace-nowrap">
-            <i data-lucide="phone-call" class="w-4 h-4 shrink-0"></i>
-            <span class="sm:hidden">Call Now</span>
-            <span class="hidden sm:inline">Call Dispatch</span>
-          </a>
-        </div>
+  <!-- Main Policy Content -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 flex-grow w-full">
+    <div class="rounded-2xl border border-bordercol bg-card p-6 sm:p-10 space-y-8">
+      
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-white">Service Terms & Privacy Policy</h1>
+        <p class="text-xs text-muted mt-1">Tyre Nation · South West England & South Wales · <span class="text-slate-300">Last Updated: October 2026</span></p>
       </div>
-    </header>
-  </div>
 
-  <!-- Main Content Body -->
-  <main class="pt-[57px] md:pt-[93px]">
-    <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-charcoal py-16 sm:py-24 lg:py-28 border-b border-bordercol min-h-[560px] flex items-center">
-      <img src="hero.webp" alt="Tyre Nation response van" fetchpriority="high" decoding="async" class="absolute inset-0 h-full w-full object-cover object-center">
-      <div class="absolute inset-0 hero-vignette pointer-events-none"></div>
+      <!-- Statutory Company Information -->
+      <section class="rounded-xl border border-bordercol bg-slate-deep/70 p-5 sm:p-6 space-y-3">
+        <h2 class="text-xs font-bold text-signal-bright uppercase tracking-widest font-display">Statutory Business Information</h2>
+        <p class="text-sm text-slate-200">
+          <strong class="text-white">Tyre Nation</strong> is a trading style of <strong class="text-white">TyreNation LTD</strong>, incorporated in England and Wales.
+        </p>
+        <div class="pt-2 border-t border-bordercol/60 space-y-2 text-xs text-slate-300">
+          <div><span class="text-muted">Company Number:</span> <strong class="text-white font-semibold">17494520</strong></div>
+          <div><span class="text-muted">Jurisdiction:</span> <strong class="text-white font-semibold">England &amp; Wales</strong></div>
+          <div><span class="text-muted">Registered Office:</span> <span class="text-slate-200">14 Museum Place, Cardiff, Wales, CF10 3BH</span></div>
+        </div>
+      </section>
 
-      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 w-full">
-        <div class="max-w-3xl">
-          <div class="inline-flex items-center gap-2 rounded-full border border-signal/50 bg-signal/15 px-3 py-1 text-xs font-semibold text-signal-bright mb-5">
-            <i data-lucide="clock" class="w-3.5 h-3.5"></i>
-            24/7 EMERGENCY MOBILE TYRE FITTING
-          </div>
-          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white drop-shadow-md">
-            Tyre Trouble? <span class="text-signal text-glow block sm:inline">Tyre Nation Comes to You</span>
-          </h1>
-          <p class="mt-4 sm:mt-5 text-sm sm:text-lg text-slate-200 max-w-2xl leading-relaxed drop-shadow">
-            Rapid roadside, home, and workplace mobile tyre replacement across South West England and South Wales. Average 30–60 minute response time.
+      <!-- Section 1: Dispatch -->
+      <section class="space-y-3 text-sm text-slate-300 leading-relaxed pt-4 border-t border-bordercol">
+        <h2 class="text-base font-bold text-white uppercase tracking-wider text-signal-bright">1. Emergency Roadside Dispatch</h2>
+        <p>• <strong>Arrival Times:</strong> Quoted arrival estimates (e.g. 30–60 minutes) are targets provided in good faith and depend on live traffic conditions, weather, and incidents across the M4, M5, Severn crossings, and surrounding road networks.</p>
+        <p>• <strong>Roadside Safety:</strong> If you are stranded on a motorway hard shoulder or active carriageway, you must remain behind safety barriers where available. Technicians reserve the right to delay or abort fitting if on-site safety cannot be maintained.</p>
+        <p>• <strong>Cancellations:</strong> Once a dedicated technician van has been dispatched to your location, call-out and transit costs are non-refundable.</p>
+        <p>• <strong>Customer-Supplied Information:</strong> It is the customer's responsibility to provide the correct tyre size and vehicle location. If a technician arrives on-site and the tyre requested does not fit the vehicle due to customer error, standard call-out and dispatch charges remain payable.</p>
+      </section>
+
+      <!-- Section 2: Home & Workplace Appointments -->
+      <section class="space-y-3 text-sm text-slate-300 leading-relaxed pt-4 border-t border-bordercol">
+        <h2 class="text-base font-bold text-white uppercase tracking-wider text-signal-bright">2. Pre-Booked Home & Workplace Fitting</h2>
+        <p>• <strong>Slot Confirmation:</strong> Preferred dates and time slots submitted via our online form are requests and remain provisional until confirmed directly by our dispatch team via phone call, WhatsApp, or SMS.</p>
+        <p>• <strong>Emergency Priority Rescheduling:</strong> Because Tyre Nation operates an active 24/7 rapid emergency service across motorway networks, pre-booked appointments may occasionally need to be adjusted or rescheduled if mobile technicians are held up by hazardous roadside emergencies. We will always communicate any schedule changes promptly.</p>
+        <p>• <strong>Driveway & Property Access:</strong> For home and workplace bookings, vehicles must be parked on flat, solid ground with sufficient space surrounding the vehicle for mobile tyre jacks and technician equipment.</p>
+      </section>
+
+      <!-- Section 3: Pricing, Deposits & Payments -->
+      <section class="space-y-3 text-sm text-slate-300 leading-relaxed pt-4 border-t border-bordercol">
+        <h2 class="text-base font-bold text-white uppercase tracking-wider text-signal-bright">3. Pricing, Deposits & Payment Terms</h2>
+        <p>• <strong>Upfront Booking Deposit:</strong> To secure call-outs and allocate stock, an upfront deposit must be paid before a technician is dispatched to your vehicle. The exact deposit amount is determined based on the job requirements, factoring in dispatch distance, time of call (e.g. night/weekend emergency), and specific tyre specifications.</p>
+        <p>• <strong>Deposit Forfeiture:</strong> Once a technician is en route, this deposit is non-refundable if the service is cancelled by the customer or if incorrect vehicle/tyre information prevents completion of the job.</p>
+        <p>• <strong>Remaining Balance:</strong> The remaining balance of the total quoted price is payable on-site immediately upon completion of fitting via card or agreed payment method.</p>
+        <p>• <strong>Included Services:</strong> Quoted pricing covers the tyre, mobile fitting, standard rubber valve replacement, balancing, and environmental tyre disposal unless stated otherwise.</p>
+        <p>• <strong>Specialist Equipment:</strong> Vehicles equipped with electronic TPMS sensors requiring replacement or requiring locking wheel nut removal services may incur standard additional component charges.</p>
+      </section>
+
+      <!-- Section 4: Wheel Safety, Repairs & Liabilities -->
+      <section class="space-y-3 text-sm text-slate-300 leading-relaxed pt-4 border-t border-bordercol">
+        <h2 class="text-base font-bold text-white uppercase tracking-wider text-signal-bright">4. Wheel Safety, Repairs & Liabilities</h2>
+        <p>• <strong>Locking Wheel Nut Keys:</strong> Customers must supply the correct locking wheel nut key on arrival. We accept no liability for damage resulting from previously overtightened, corroded, or damaged wheel bolts/keys installed by third parties.</p>
+        <p>• <strong>Puncture Repairs (BS AU 159):</strong> Puncture repairs are carried out strictly according to British Standard BS AU 159. If a tyre is deemed unrepairable due to shoulder/sidewall penetration, run-flat driving, or internal carcass separation, a replacement tyre must be fitted for road safety.</p>
+        <p>• <strong>Pre-Existing Rim & TPMS Conditions:</strong> We are not liable for pre-existing cracked alloys, structural rim buckles, bead corrosion preventing an airtight seal, or seized/faulty TPMS valves.</p>
+        <p>• <strong>Wheel Retorque Notice:</strong> As standard UK automotive safety best practice, customers are advised to inspect and re-torque wheel nuts after driving approximately 30–50 miles following mobile tyre replacement.</p>
+        <p>• <strong>Warranty:</strong> All new tyres supplied carry standard manufacturer warranties covering material or manufacturing defects. Warranties strictly exclude road hazard damage (potholes, curbing, punctures, or uneven tread wear from suspension misalignment).</p>
+      </section>
+
+      <!-- Section 5: Online Forms, Messaging & Carrier Rates -->
+      <section class="space-y-3 text-sm text-slate-300 leading-relaxed pt-4 border-t border-bordercol">
+        <h2 class="text-base font-bold text-white uppercase tracking-wider text-signal-bright">5. Online Booking Forms & Messaging Costs</h2>
+        <p>• <strong>Free Platform Transmission:</strong> Submitting a dispatch or booking request via WhatsApp uses standard data / Wi-Fi and incurs zero service charges from Tyre Nation.</p>
+        <p>• <strong>SMS Carrier Rates:</strong> If you choose to send your booking via standard Text (SMS), our dispatch destination is a standard UK mobile number (07xxx). Tyre Nation does not charge any premium fee for receiving messages; however, standard SMS rates determined by your mobile provider may apply if you do not have inclusive text allowances on your monthly plan.</p>
+      </section>
+
+      <!-- Section 6: Location Access & Privacy -->
+      <section id="privacy" class="space-y-3 text-sm text-slate-300 leading-relaxed pt-4 border-t border-bordercol">
+        <h2 class="text-base font-bold text-white uppercase tracking-wider text-signal-bright">6. Location Data & UK GDPR Privacy</h2>
+        <div class="rounded-xl border border-signal/30 bg-slate-deep p-4 text-xs sm:text-sm text-slate-200 space-y-2">
+          <p class="font-bold text-white flex items-center gap-1.5 text-signal-bright">
+            <i data-lucide="shield-check" class="w-4 h-4 shrink-0"></i>
+            Strict Permission-Only Location Access
           </p>
-
-          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 w-full">
-            <a href="tel:07123456789" class="inline-flex items-center justify-center gap-2 rounded-xl bg-signal px-5 py-3.5 text-sm sm:text-base font-extrabold text-white text-center transition-all hover:scale-[1.02] active:scale-95 signal-glow">
-              <i data-lucide="phone" class="w-4 h-4 shrink-0"></i>
-              <span>Call Tyre Nation: 07123 456789</span>
-            </a>
-            <a href="#dispatch" class="inline-flex items-center justify-center rounded-xl border-2 border-signal-bright bg-signal/15 px-5 py-3.5 text-sm sm:text-base font-bold text-signal-bright text-center hover:bg-signal/25 transition-colors">
-              Request Rapid Dispatch
-            </a>
-          </div>
-
-          <!-- Trust Badges -->
-          <div class="mt-8 sm:mt-9 flex flex-wrap gap-2.5">
-            <div class="inline-flex items-center gap-2 rounded-full border border-bordercol bg-card/90 backdrop-blur-sm px-3.5 py-1.5 text-xs sm:text-sm font-medium text-slate-200">
-              <i data-lucide="clock" class="w-4 h-4 text-signal-bright shrink-0"></i>
-              30–60 Min Response
-            </div>
-            <div class="inline-flex items-center gap-2 rounded-full border border-bordercol bg-card/90 backdrop-blur-sm px-3.5 py-1.5 text-xs sm:text-sm font-medium text-slate-200">
-              <i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>
-              Covering South West England & South Wales
-            </div>
-            <div class="inline-flex items-center gap-2 rounded-full border border-bordercol bg-card/90 backdrop-blur-sm px-3.5 py-1.5 text-xs sm:text-sm font-medium text-slate-200">
-              <i data-lucide="wrench" class="w-4 h-4 text-signal-bright shrink-0"></i>
-              All Tyre Sizes & Brands
-            </div>
-            <div class="inline-flex items-center gap-2 rounded-full border border-bordercol bg-card/90 backdrop-blur-sm px-3.5 py-1.5 text-xs sm:text-sm font-medium text-slate-200">
-              <i data-lucide="credit-card" class="w-4 h-4 text-signal-bright shrink-0"></i>
-              Card Payments Roadside
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stat Metrics -->
-    <section class="bg-slate-deep border-b border-bordercol">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div class="flex items-center gap-4">
-          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-signal/15 text-signal-bright">
-            <i data-lucide="timer" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">47<span class="text-signal-bright text-lg ml-1">min</span></div>
-            <div class="text-xs sm:text-sm text-muted">Average response (last 30 days)</div>
-          </div>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-signal/15 text-signal-bright">
-            <i data-lucide="clock-4" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">24/7</div>
-            <div class="text-xs sm:text-sm text-muted">Dispatch — every day, all hours</div>
-          </div>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-signal/15 text-signal-bright">
-            <i data-lucide="star" class="w-6 h-6 fill-current"></i>
-          </div>
-          <div>
-            <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">5★</div>
-            <div class="text-xs sm:text-sm text-muted">Rated by stranded drivers across the region</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section class="bg-charcoal py-16 sm:py-24 border-b border-bordercol">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <div class="max-w-2xl">
-          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Core Services</div>
-          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Mobile tyre services, wherever you are</h2>
-          <p class="mt-3 text-muted leading-relaxed">From motorway emergencies to pre-booked fitting on your driveway — fully-stocked vans covering South West England and South Wales.</p>
-        </div>
-
-        <div class="mt-10 grid gap-6 md:grid-cols-3">
-          <div class="group relative rounded-2xl border border-bordercol bg-card p-7 transition-all hover:border-signal/50 hover:-translate-y-1 overflow-hidden flex flex-col justify-between">
-            <div>
-              <div class="relative flex h-12 w-12 items-center justify-center rounded-xl bg-signal/15 text-signal-bright transition-colors group-hover:bg-signal group-hover:text-white">
-                <i data-lucide="wrench" class="w-6 h-6"></i>
-              </div>
-              <h3 class="mt-5 font-display text-xl font-bold text-white">Emergency Roadside Assistance</h3>
-              <p class="mt-2.5 text-sm text-muted leading-relaxed">Motorway and A-road rapid call-outs. We reach you fast when you're stranded roadside.</p>
-            </div>
-          </div>
-
-          <div class="group relative rounded-2xl border border-bordercol bg-card p-7 transition-all hover:border-signal/50 hover:-translate-y-1 overflow-hidden flex flex-col justify-between">
-            <div>
-              <div class="relative flex h-12 w-12 items-center justify-center rounded-xl bg-signal/15 text-signal-bright transition-colors group-hover:bg-signal group-hover:text-white">
-                <i data-lucide="home" class="w-6 h-6"></i>
-              </div>
-              <h3 class="mt-5 font-display text-xl font-bold text-white">Home & Workplace Fitting</h3>
-              <p class="mt-2.5 text-sm text-muted leading-relaxed">Pre-booked or same-day convenience — new tyres fitted on your driveway or at work.</p>
-            </div>
-          </div>
-
-          <div class="group relative rounded-2xl border border-bordercol bg-card p-7 transition-all hover:border-signal/50 hover:-translate-y-1 overflow-hidden flex flex-col justify-between">
-            <div>
-              <div class="relative flex h-12 w-12 items-center justify-center rounded-xl bg-signal/15 text-signal-bright transition-colors group-hover:bg-signal group-hover:text-white">
-                <i data-lucide="gauge" class="w-6 h-6"></i>
-              </div>
-              <h3 class="mt-5 font-display text-xl font-bold text-white">Puncture Repair & Safety Checks</h3>
-              <p class="mt-2.5 text-sm text-muted leading-relaxed">Safe on-site repair where possible, plus full pressure, valves, and wheel balancing checks.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Coverage Areas -->
-    <section class="bg-slate-deep py-16 sm:py-24 border-b border-bordercol">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Coverage Areas</div>
-            <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Main Areas We Cover</h2>
-            <p class="mt-3 text-muted leading-relaxed">Fast emergency response across primary hubs and commuter routes. Wherever you are across South West England or South Wales, Tyre Nation is ready for dispatch.</p>
-          </div>
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Bristol</div>
-            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Bath</div>
-            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Newport</div>
-            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Cardiff</div>
-            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Swindon</div>
-            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Gloucester</div>
-            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Weston-super-Mare</div>
-            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>M4 Corridor</div>
-            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>M5 Corridor</div>
-            <div class="flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>Severn Bridges</div>
-            <div class="col-span-2 sm:col-span-2 flex items-center gap-2 rounded-xl border border-bordercol bg-card px-4 py-3 text-sm font-semibold text-slate-200"><i data-lucide="map-pin" class="w-4 h-4 text-signal-bright shrink-0"></i>All Surrounding & Nearby Areas</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3 Simple Steps -->
-    <section class="bg-charcoal py-16 sm:py-24 border-b border-bordercol">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <div class="max-w-2xl">
-          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">How It Works</div>
-          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Back on the road in 3 simple steps</h2>
-        </div>
-
-        <div class="mt-10 grid gap-6 md:grid-cols-3">
-          <div class="relative rounded-2xl border border-bordercol bg-card p-7">
-            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-white font-display font-extrabold text-xl signal-glow">1</div>
-            <h3 class="mt-4 font-display text-xl font-bold text-white">Contact Dispatch</h3>
-            <p class="mt-2 text-sm text-muted leading-relaxed">Share your location and requirements via WhatsApp, SMS, or direct call.</p>
-            <i data-lucide="chevron-right" class="hidden md:block absolute -right-3 top-10 w-6 h-6 text-signal/60"></i>
-          </div>
-          <div class="relative rounded-2xl border border-bordercol bg-card p-7">
-            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-white font-display font-extrabold text-xl signal-glow">2</div>
-            <h3 class="mt-4 font-display text-xl font-bold text-white">Van Dispatched</h3>
-            <p class="mt-2 text-sm text-muted leading-relaxed">A fully-equipped mobile tyre van arrives on the scene or at your booked appointment time.</p>
-            <i data-lucide="chevron-right" class="hidden md:block absolute -right-3 top-10 w-6 h-6 text-signal/60"></i>
-          </div>
-          <div class="relative rounded-2xl border border-bordercol bg-card p-7">
-            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-white font-display font-extrabold text-xl signal-glow">3</div>
-            <h3 class="mt-4 font-display text-xl font-bold text-white">Fitted On-Site</h3>
-            <p class="mt-2 text-sm text-muted leading-relaxed">Fitted roadside or at your driveway. Pay easily by card or agreed method on the spot.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- What's On The Van / Tyre Brands -->
-    <section class="bg-slate-deep py-16 sm:py-24 border-b border-bordercol">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
-        <div class="relative order-2 lg:order-1 overflow-hidden rounded-2xl border border-bordercol bg-card">
-          <img src="van-tyres.webp" alt="Tyre Nation fitting stock and tyres" loading="lazy" decoding="async" width="800" height="800" class="aspect-square w-full object-cover">
-          <div class="hazard-band h-3.5 w-full" aria-hidden="true"></div>
-        </div>
-        <div class="order-1 lg:order-2">
-          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">What's On The Van</div>
-          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Stocked for any size, any budget</h2>
-          <p class="mt-3 text-muted leading-relaxed">We stock multiple tyre brands to suit every requirement—ranging from cost-effective budget tyres to leading premium manufacturers.</p>
-          
-          <div class="mt-6 flex flex-wrap gap-2.5">
-            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>Budget Options</div>
-            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>Continental</div>
-            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>Michelin</div>
-            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>Pirelli</div>
-            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>Bridgestone</div>
-            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>Goodyear</div>
-            <div class="inline-flex items-center gap-2 rounded-lg border border-bordercol bg-card px-3.5 py-2 text-sm font-semibold text-slate-200"><i data-lucide="circle-dot" class="w-4 h-4 text-signal-bright shrink-0"></i>All sizes 13" to 22"</div>
-          </div>
-          <div class="mt-6 flex items-center gap-2 text-sm text-muted">
-            <i data-lucide="cog" class="w-4 h-4 text-signal-bright"></i>
-            Wheel balancing, valves & pressure checks carried out on every fit.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Quick Contact Form with Dual Service Mode -->
-    <section id="dispatch" class="bg-charcoal py-16 sm:py-24">
-      <div class="mx-auto max-w-3xl px-4 sm:px-6">
-        <div class="text-center">
-          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Fast Booking</div>
-          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Request Mobile Tyre Service</h2>
-          <p class="mt-3 text-muted">Choose emergency roadside dispatch or pre-book a scheduled mobile service at your home or workplace.</p>
-        </div>
-
-        <!-- Mode Selector Switch -->
-        <div class="mt-8 grid grid-cols-2 gap-2 p-1.5 rounded-2xl bg-slate-deep border border-bordercol max-w-md mx-auto">
-          <button type="button" id="tabEmergency" onclick="switchServiceMode('emergency')" class="flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-extrabold transition-all bg-signal text-white signal-glow cursor-pointer">
-            <i data-lucide="zap" class="w-4 h-4"></i>
-            <span>Emergency (24/7)</span>
-          </button>
-          <button type="button" id="tabPrebook" onclick="switchServiceMode('prebook')" class="flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all cursor-pointer">
-            <i data-lucide="calendar" class="w-4 h-4"></i>
-            <span>Pre-Book Service</span>
-          </button>
-        </div>
-
-        <!-- Form Card -->
-        <form id="tyreContactForm" class="mt-8 rounded-2xl border border-bordercol bg-card p-6 sm:p-8 grid gap-5 text-left">
-          
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block mb-1.5 text-sm font-semibold text-slate-200">Name</label>
-              <input id="userName" class="flex h-11 w-full rounded-lg border border-bordercol bg-slate-deep px-3.5 py-2 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal transition-colors" required placeholder="Your name">
-            </div>
-            <div>
-              <label class="block mb-1.5 text-sm font-semibold text-slate-200">Phone Number</label>
-              <input id="userPhone" type="tel" class="flex h-11 w-full rounded-lg border border-bordercol bg-slate-deep px-3.5 py-2 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal transition-colors" required placeholder="07xxx xxxxxx">
-            </div>
-          </div>
-
-          <!-- Non-Emergency Pre-Booking Fields -->
-          <div id="prebookFields" class="hidden grid sm:grid-cols-2 gap-4 p-4 sm:p-5 rounded-xl border border-signal/30 bg-slate-deep/70">
-            <div>
-              <label class="block mb-1.5 text-sm font-semibold text-signal-bright">Service Required</label>
-              <div class="relative">
-                <select id="userPrebookService" class="appearance-none flex h-11 w-full rounded-lg border border-bordercol bg-charcoal px-3.5 py-2 text-sm text-white focus:outline-none focus:border-signal transition-colors pr-9">
-                  <option value="Home/Workplace Tyre Replacement">Home / Workplace Tyre Replacement</option>
-                  <option value="Puncture Repair & Inspection">Puncture Repair & Inspection</option>
-                  <option value="Seasonal / Fleet Tyre Fitting">Seasonal / Fleet Tyre Fitting</option>
-                  <option value="Tyre Safety & Pressure Check">Tyre Safety & Pressure Check</option>
-                </select>
-                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-400">
-                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <label class="block mb-1.5 text-sm font-semibold text-signal-bright">Preferred Date & Time Slot</label>
-              <div class="grid grid-cols-2 gap-2">
-                
-                <!-- Native Date Picker Trigger -->
-                <div class="relative cursor-pointer" onclick="openDatePicker()">
-                  <input id="userPrebookDate" type="date" onchange="updateDateDisplay(this)" class="sr-only">
-                  <div id="dateDisplayLabel" class="flex h-11 w-full items-center justify-between rounded-lg border border-bordercol bg-charcoal px-3 py-2 text-xs sm:text-sm text-slate-300 hover:border-signal transition-colors">
-                    <span id="dateText" class="truncate font-medium">Select Date</span>
-                    <i data-lucide="calendar" class="w-4 h-4 text-signal-bright shrink-0 ml-1"></i>
-                  </div>
-                </div>
-
-                <div class="relative">
-                  <select id="userPrebookSlot" class="appearance-none flex h-11 w-full rounded-lg border border-bordercol bg-charcoal px-3 py-2 text-xs sm:text-sm text-white focus:outline-none focus:border-signal transition-colors pr-7">
-                    <option value="Morning (8am-12pm)">Morning (8-12)</option>
-                    <option value="Afternoon (12pm-5pm)">Afternoon (12-5)</option>
-                    <option value="Evening (5pm-8pm)">Evening (5-8)</option>
-                  </select>
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-400">
-                    <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <div class="flex items-center justify-between mb-1.5">
-                <label id="locationLabel" class="text-sm font-semibold text-slate-200">Roadside Location / Postcode</label>
-                <button type="button" onclick="toggleHelpBox('locationHelpBox')" class="cursor-pointer inline-flex items-center gap-1 text-[11px] font-bold text-signal-bright hover:text-white bg-signal/20 hover:bg-signal/30 px-2 py-0.5 rounded-md transition-all">
-                  <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
-                  <span>How to find?</span>
-                </button>
-              </div>
-
-              <input id="userLocation" class="flex h-11 w-full rounded-lg border border-bordercol bg-slate-deep px-3.5 py-2 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal transition-colors" required placeholder="e.g. CF10 1AA, BS1 5U, or M4 J28">
-
-              <div id="locationHelpBox" class="hidden mt-2.5 rounded-xl border border-signal/40 bg-slate-deep/95 p-3.5 shadow-lg">
-                <div class="flex items-center justify-between border-b border-bordercol pb-1.5 mb-2 text-xs font-bold text-signal-bright">
-                  <span>📍 Location Help</span>
-                  <span onclick="toggleHelpBox('locationHelpBox')" class="cursor-pointer text-slate-400 hover:text-white">✕</span>
-                </div>
-                <ul class="text-[12px] text-slate-300 space-y-1.5 leading-snug">
-                  <li>• <strong class="text-white">Postcode or Address:</strong> Enter your home postcode, driveway, or workplace address.</li>
-                  <li>• <strong class="text-white">Roadside Pin:</strong> For emergencies, we can also attach your exact GPS coordinates when you tap submit.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex items-center justify-between mb-1.5">
-                <label class="text-sm font-semibold text-slate-200">Tyre Size</label>
-                <button type="button" onclick="toggleHelpBox('tyreHelpBox')" class="cursor-pointer inline-flex items-center gap-1 text-[11px] font-bold text-signal-bright hover:text-white bg-signal/20 hover:bg-signal/30 px-2 py-0.5 rounded-md transition-all">
-                  <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
-                  <span>Where is this?</span>
-                </button>
-              </div>
-              <input id="userTyre" class="flex h-11 w-full rounded-lg border border-bordercol bg-slate-deep px-3.5 py-2 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal transition-colors" placeholder="e.g., 205/55 R16">
-
-              <div id="tyreHelpBox" class="hidden mt-2.5 rounded-xl border border-signal/40 bg-slate-deep/95 p-3.5 shadow-lg">
-                <div class="flex items-center justify-between border-b border-bordercol pb-1.5 mb-2 text-xs font-bold text-signal-bright">
-                  <span>🔧 Reading Your Tyre Sidewall</span>
-                  <span onclick="toggleHelpBox('tyreHelpBox')" class="cursor-pointer text-slate-400 hover:text-white">✕</span>
-                </div>
-                <p class="text-[12px] text-slate-300 leading-relaxed">
-                  Look at the raised lettering on the tyre sidewall. It looks like:
-                </p>
-                <div class="my-2 p-1.5 rounded bg-card border border-bordercol text-center font-mono text-xs font-extrabold text-signal-bright">
-                  205 / 55 R16
-                </div>
-                <p class="text-[11px] text-muted">
-                  Can't see it? Leave it blank and write your vehicle registration below.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <label class="block mb-1.5 text-sm font-semibold text-slate-200">Vehicle Reg / Extra Notes</label>
-            <textarea id="userNote" rows="3" class="flex min-h-[75px] w-full rounded-lg border border-bordercol bg-slate-deep px-3.5 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-signal resize-none transition-colors" placeholder="Vehicle reg, flat tyre on driveway, locking nut key available, etc."></textarea>
-          </div>
-
-          <!-- Dual-Action Submit Buttons -->
-          <div class="mt-2 grid sm:grid-cols-2 gap-3">
-            <button type="button" onclick="handleSubmit('whatsapp')" class="inline-flex items-center justify-center gap-2 h-14 w-full rounded-xl bg-emerald-600 hover:bg-emerald-500 text-sm sm:text-base font-extrabold text-white transition-all hover:scale-[1.01] active:scale-95 shadow-lg shadow-emerald-950/40 cursor-pointer">
-              <i data-lucide="message-circle" class="w-5 h-5"></i>
-              <span id="btnTextWhatsapp">Send via WhatsApp</span>
-            </button>
-
-            <button type="button" onclick="handleSubmit('sms')" class="inline-flex items-center justify-center gap-2 h-14 w-full rounded-xl bg-signal hover:bg-signal-bright text-sm sm:text-base font-extrabold text-white transition-all hover:scale-[1.01] active:scale-95 signal-glow cursor-pointer">
-              <i data-lucide="send" class="w-5 h-5"></i>
-              <span id="btnTextSMS">Send via Text (SMS)</span>
-            </button>
-          </div>
-
-        </form>
-
-        <!-- Confirmation State -->
-        <div id="formSuccessMessage" class="hidden mt-10 rounded-2xl border border-emerald-500/40 bg-emerald-950/40 p-8 text-center">
-          <div class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 mb-4 ring-8 ring-emerald-500/10">
-            <i data-lucide="check-circle-2" class="w-10 h-10"></i>
-          </div>
-          <h3 class="font-display text-2xl font-bold text-white">Details Dispatched!</h3>
-          <p class="mt-2 text-slate-300 text-sm max-w-md mx-auto">
-            Your details have been formatted and sent. Our mobile technician team will confirm shortly.
+          <p>
+            We <strong>never</strong> access, track, or collect your GPS location automatically without your explicit consent. Your browser or mobile device will strictly prompt you for permission (<em>"Allow Tyre Nation to access your location?"</em>) when you submit your dispatch request.
           </p>
-          <div class="mt-6">
-            <a href="tel:07123456789" class="inline-flex items-center gap-2 text-sm font-bold text-signal-bright underline">
-              Need immediate phone dispatch? Call 07123 456789
-            </a>
-          </div>
         </div>
+        <p>• <strong>Explicit Consent Only:</strong> Location coordinates are only retrieved if you actively click <em>"Allow"</em> on your device prompt. If you deny or dismiss the prompt, zero location data is accessed, and we rely purely on the address or junction you typed.</p>
+        <p>• <strong>Single-Use Dispatch Purpose:</strong> Coordinates are used solely to generate your emergency dispatch message (via WhatsApp or SMS) so the technician can navigate directly to your vehicle.</p>
+        <p>• <strong>UK GDPR Compliance:</strong> Customer contact details and invoice records are processed solely for fulfilling roadside services and statutory accounting/tax records in compliance with the Data Protection Act 2018. We never sell, lease, or distribute customer details to third-party marketing networks.</p>
+      </section>
 
-      </div>
-    </section>
+      <!-- Section 7: Policy Changes & Amendments -->
+      <section class="space-y-3 text-sm text-slate-300 leading-relaxed pt-4 border-t border-bordercol">
+        <h2 class="text-base font-bold text-white uppercase tracking-wider text-signal-bright">7. Policy Updates & Amendments</h2>
+        <p>• TyreNation LTD reserves the right to revise, modify, or update these Service Terms and Privacy Policy at any time without prior notice.</p>
+        <p>• Any changes will take effect immediately upon being posted to this page, with the latest revision date clearly indicated above.</p>
+      </section>
+
+      <!-- Section 8: Contact -->
+      <section class="space-y-3 text-sm text-slate-300 leading-relaxed pt-4 border-t border-bordercol">
+        <h2 class="text-base font-bold text-white uppercase tracking-wider text-signal-bright">8. Dispatch Contact</h2>
+        <p>For immediate emergency tyre requests or queries regarding your service:</p>
+        <p class="font-semibold text-white">Emergency Dispatch: <a href="tel:07123456789" class="text-signal-bright underline">07123 456789</a> (24 Hours / 7 Days)</p>
+      </section>
+
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-slate-deep border-t border-bordercol">
-    <div class="hazard-band h-1.5 w-full" aria-hidden="true"></div>
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12">
-      <div class="grid gap-8 md:grid-cols-3">
-        <div>
-          <!-- White Logo in Footer -->
-          <div class="mb-4">
-            <img src="logo-white.png" alt="Tyre Nation 24/7 Logo" loading="lazy" class="h-10 w-auto">
-          </div>
-          <p class="mt-3 text-sm text-muted max-w-xs">24/7 emergency mobile tyre fitting and roadside call-out across South West England and South Wales.</p>
-          <p class="mt-2 text-xs text-muted/70">Trading name of TyreNation LTD · CRN: 17494520</p>
-        </div>
-        <div>
-          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Emergency Dispatch</div>
-          <a href="tel:07123456789" class="mt-3 flex items-center gap-2 font-display text-2xl font-extrabold text-white hover:text-signal-bright transition-colors">
-            <i data-lucide="phone-call" class="w-5 h-5 text-signal-bright"></i>
-            07123 456789
-          </a>
-          <p class="mt-2 text-sm text-muted">Available 24 hours, 7 days a week.</p>
-        </div>
-        <div>
-          <div class="text-xs font-bold uppercase tracking-widest text-signal-bright font-display">Coverage</div>
-          <p class="mt-3 text-sm text-muted leading-relaxed">Bristol, Bath, Cardiff, Newport, M4, M5, Severn Bridges, and all surrounding areas.</p>
-        </div>
-      </div>
-      
-      <!-- Sub-Footer with Version, Social, and Legal -->
-      <div class="mt-10 pt-6 border-t border-bordercol flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between text-xs text-muted">
-        <div class="flex items-center gap-2">
-          <p>© 2026 TyreNation LTD. All rights reserved.</p>
-          <span class="text-bordercol">|</span>
-          <span class="text-[11px] font-mono opacity-60">v1.2.0</span>
-        </div>
-        <div class="flex items-center gap-6">
-          <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 hover:text-white transition-colors">
-            <i data-lucide="instagram" class="w-4 h-4 text-signal-bright"></i>
-            <span>Instagram</span>
-          </a>
-          <a href="./policy/" class="hover:text-white transition-colors underline underline-offset-4">Terms & Privacy Policy</a>
-        </div>
-      </div>
-    </div>
+  <footer class="bg-slate-deep border-t border-bordercol py-6 px-6 text-center text-xs text-muted">
+    <p>© 2026 TyreNation LTD. Emergency Mobile Tyre Fitting across South West England & South Wales.</p>
   </footer>
 
-  <!-- Deferred Scripts -->
-  <script src="https://unpkg.com/lucide@latest" defer onload="lucide.createIcons()"></script>
   <script>
-    let currentMode = 'emergency';
-
-    function switchServiceMode(mode) {
-      currentMode = mode;
-      const tabEmergency = document.getElementById('tabEmergency');
-      const tabPrebook = document.getElementById('tabPrebook');
-      const prebookFields = document.getElementById('prebookFields');
-      const locationLabel = document.getElementById('locationLabel');
-      const locationInput = document.getElementById('userLocation');
-
-      if (mode === 'prebook') {
-        tabPrebook.className = 'flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-extrabold transition-all bg-signal text-white signal-glow cursor-pointer';
-        tabEmergency.className = 'flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all cursor-pointer';
-        
-        prebookFields.classList.remove('hidden');
-        locationLabel.textContent = 'Fitting Address / Postcode (Home or Work)';
-        locationInput.placeholder = 'e.g. BS1 4DJ or 12 High Street, Newport';
-      } else {
-        tabEmergency.className = 'flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-extrabold transition-all bg-signal text-white signal-glow cursor-pointer';
-        tabPrebook.className = 'flex items-center justify-center gap-2 py-3 rounded-xl font-display text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all cursor-pointer';
-        
-        prebookFields.classList.add('hidden');
-        locationLabel.textContent = 'Roadside Location / Postcode';
-        locationInput.placeholder = 'e.g. CF10 1AA, BS1 5U, or M4 J28';
-      }
-      if (window.lucide) lucide.createIcons();
-    }
-
-    function openDatePicker() {
-      const input = document.getElementById('userPrebookDate');
-      if (input && typeof input.showPicker === 'function') {
-        input.showPicker();
-      } else if (input) {
-        input.focus();
-      }
-    }
-
-    function updateDateDisplay(input) {
-      const dateText = document.getElementById('dateText');
-      if (input.value) {
-        const parts = input.value.split('-');
-        if (parts.length === 3) {
-          dateText.textContent = `${parts[2]}/${parts[1]}/${parts[0]}`;
-          dateText.classList.remove('text-slate-300');
-          dateText.classList.add('text-white', 'font-bold');
-        }
-      } else {
-        dateText.textContent = 'Select Date';
-        dateText.classList.remove('text-white', 'font-bold');
-        dateText.classList.add('text-slate-300');
-      }
-    }
-
-    function toggleHelpBox(boxId) {
-      const box = document.getElementById(boxId);
-      if (box.classList.contains('hidden')) {
-        box.classList.remove('hidden');
-      } else {
-        box.classList.add('hidden');
-      }
-      if (window.lucide) lucide.createIcons();
-    }
-
-    function handleSubmit(channel) {
-      const form = document.getElementById('tyreContactForm');
-      
-      if (!form.reportValidity()) {
-        return;
-      }
-
-      const dispatchNumber = "07123456789";       
-      const intlDispatchNumber = "447123456789"; 
-
-      const name = document.getElementById('userName').value;
-      const phone = document.getElementById('userPhone').value;
-      const location = document.getElementById('userLocation').value;
-      const tyre = document.getElementById('userTyre').value || 'Unknown / Check Reg';
-      const note = document.getElementById('userNote').value || 'None';
-
-      const btnWhatsapp = document.getElementById('btnTextWhatsapp');
-      const btnSMS = document.getElementById('btnTextSMS');
-      if (btnWhatsapp) btnWhatsapp.textContent = 'Locating GPS...';
-      if (btnSMS) btnSMS.textContent = 'Locating GPS...';
-
-      let dispatched = false;
-
-      function dispatchMessage(lat, lng) {
-        if (dispatched) return;
-        dispatched = true;
-
-        let header = currentMode === 'emergency' 
-          ? `🚨 EMERGENCY TYRE CALL-OUT (TYRE NATION | 24/7)\n\n`
-          : `📅 PRE-BOOKED MOBILE SERVICE (TYRE NATION)\n\n`;
-
-        let message = header +
-                      `👤 Name: ${name}\n` +
-                      `📞 Phone: ${phone}\n`;
-
-        if (currentMode === 'prebook') {
-          const service = document.getElementById('userPrebookService').value;
-          const rawDate = document.getElementById('userPrebookDate').value;
-          let dateStr = 'Earliest available';
-          if (rawDate) {
-            const p = rawDate.split('-');
-            dateStr = `${p[2]}/${p[1]}/${p[0]}`;
-          }
-          const slot = document.getElementById('userPrebookSlot').value;
-          message += `🛠️ Service: ${service}\n` +
-                     `📆 Preferred Date: ${dateStr} (${slot})\n`;
-        }
-
-        message += `📍 Customer Location: ${location}\n\n`;
-
-        // Direct sat-nav routing links for your drivers
-        if (lat && lng) {
-          message += `🗺️ Roadside Sat-Nav Routing:\n` +
-                     `• Waze: https://waze.com/ul?ll=${lat},${lng}&navigate=yes\n` +
-                     `• Google Maps: https://maps.google.com/?q=${lat},${lng}\n\n`;
-        } else {
-          const encodedLoc = encodeURIComponent(location);
-          message += `🗺️ Sat-Nav Routing:\n` +
-                     `• Waze: https://waze.com/ul?q=${encodedLoc}&navigate=yes\n` +
-                     `• Google Maps: https://maps.google.com/?q=${encodedLoc}\n\n`;
-        }
-
-        message += `🔧 Tyre Size: ${tyre}\n` +
-                   `📝 Note: ${note}`;
-
-        document.getElementById('tyreContactForm').classList.add('hidden');
-        document.getElementById('formSuccessMessage').classList.remove('hidden');
-        if (window.lucide) lucide.createIcons();
-
-        if (channel === 'whatsapp') {
-          window.location.href = `https://wa.me/${intlDispatchNumber}?text=${encodeURIComponent(message)}`;
-        } else {
-          const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-          const separator = isIOS ? '&' : '?';
-          window.location.href = `sms:${dispatchNumber}${separator}body=${encodeURIComponent(message)}`;
-        }
-      }
-
-      if (currentMode === 'emergency' && "geolocation" in navigator) {
-        const safetyTimer = setTimeout(() => {
-          dispatchMessage(null, null);
-        }, 5500);
-
-        navigator.geolocation.getCurrentPosition(
-          (pos) => {
-            clearTimeout(safetyTimer);
-            const lat = pos.coords.latitude.toFixed(5);
-            const lng = pos.coords.longitude.toFixed(5);
-            dispatchMessage(lat, lng);
-          },
-          (err) => {
-            clearTimeout(safetyTimer);
-            dispatchMessage(null, null);
-          },
-          { 
-            enableHighAccuracy: true, 
-            timeout: 5000, 
-            maximumAge: 60000 
-          }
-        );
-      } else {
-        dispatchMessage(null, null);
-      }
-    }
+    lucide.createIcons();
   </script>
 </body>
 </html>
